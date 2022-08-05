@@ -2,8 +2,9 @@ import React, { useState } from "react";
 
 const IndividualUser = props => {
 	// const [user, setUser] = useState({});
+	const { users } = props;
 
-	const { id, name, location, title, employer, movies } = props.users[0];
+	const { id, name, location, title, employer, movies } = users[0];
 
 	return (
 		<section className="user-card container">
@@ -38,7 +39,7 @@ const IndividualUser = props => {
 
 				<section className="user-id-box">
 					<p className="user-id">
-						ID: {id}/{props.users.length}
+						ID: {id}/{users.length}
 					</p>
 				</section>
 			</article>

@@ -1,4 +1,4 @@
-let users = [
+let db = [
 	{
 		id: 1,
 		name: "John Smith",
@@ -33,4 +33,4 @@ let users = [
 	}
 ];
 
-export default users;
+export default db;

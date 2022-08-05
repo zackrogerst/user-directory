@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 
 // import { Routes, Route, Navigate } from "react-router-dom";
 
@@ -12,9 +12,10 @@ import AddAUser from "./screens/AddAUser";
 import IndividualUser from "./screens/IndividualUser";
 import NotFound from "./screens/NotFound";
 
-import users from "./data/users";
+import db from "./data/db";
 
 function App() {
+	const [usersList, setUsersList] = useState(db);
 	return (
 		// <Layout>
 		// 	<Routes>
@@ -28,9 +29,9 @@ function App() {
 		<Fragment>
 			<Header />
 			<main>
-				<AllUsers users={users} />
-				<AddAUser />
-				<IndividualUser users={users} />
+				<AllUsers users={usersList} setUsers={setUsersList} />
+				<AddAUser users={usersList} setUsers={setUsersList} />
+				<IndividualUser users={usersList} setUsers={setUsersList} />
 				<NotFound />
 			</main>
 		</Fragment>
