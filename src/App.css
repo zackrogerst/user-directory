@@ -1,0 +1,182 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol,
+ul {
+	list-style: none;
+}
+blockquote,
+q {
+	quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: "";
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* -------------------------------------------------------------- 
+---------------- Globals
+-------------------------------------------------------------- */
+
+* {
+	margin: none;
+	color: var(--light);
+}
+
+:root {
+	--highlight: #34a5da;
+	--dark: #222222;
+	--dark-lighter: #3b3b3b;
+	--light: #f1f2f6;
+	--space-extra-small: 1rem;
+	--space-small: 2rem;
+}
+
+body {
+	background-color: var(--dark);
+}
+
+header {
+	background-color: var(--highlight);
+	padding: var(--space-small);
+}
+
+main {
+	padding: var(--space-small);
+}
+
+/* -------------------------------------------------------------- 
+---------------- Header.jsx
+-------------------------------------------------------------- */
+
+.nav-ul {
+	display: flex;
+	gap: var(--space-small);
+}
+
+.nav-link {
+	text-decoration: none;
+	font-weight: bold;
+	color: var(--dark);
+}
+
+.nav-link:visited {
+	color: var(--dark-lighter);
+}
+
+.nav-link:hover {
+	text-decoration: underline;
+}
+
+.nav-link:active {
+	text-decoration: underline;
+}
