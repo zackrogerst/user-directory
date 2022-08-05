@@ -8,7 +8,7 @@ const AllUsers = props => {
 	return (
 		<section className="all-users-container container">
 			{users.map((e, i) => (
-				<UserPreview user={e}/>
+				<UserPreview user={e} />
 			))}
 		</section>
 	);

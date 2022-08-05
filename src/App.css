@@ -171,6 +171,7 @@ button {
 	font-weight: bold;
 	color: var(--light);
 	cursor: pointer;
+	max-width: max-content;
 }
 
 button:hover {
@@ -189,6 +190,16 @@ li {
 	margin: var(--space-extra-small) 0;
 }
 
+label {
+	margin-top: var(--space-small);
+}
+
+input {
+	padding: var(--space-extra-small);
+	margin: var(--space-extra-small) 0;
+	border: 1px solid var(--dark-lighter);
+}
+
 h2 {
 	font-size: 34px;
 	width: max-content;
@@ -200,6 +211,11 @@ h3 {
 
 h4 {
 	font-size: 16px;
+}
+
+input {
+	display: block;
+	width: 100%;
 }
 
 .container {
@@ -253,12 +269,14 @@ h4 {
 	padding: var(--space-small);
 	display: flex;
 	justify-content: space-between;
+	flex-wrap: wrap;
 	align-items: center;
 }
 
 .user-preview-info {
 	display: flex;
 	gap: var(--space);
+	flex-wrap: wrap;
 }
 
 .user-preview-job {
@@ -268,6 +286,40 @@ h4 {
 	align-items: center;
 	gap: var(--space-extra-small);
 }
+
+/* -------------------------------------------------------------- 
+------- below is -- AddAUser.jsx
+-------------------------------------------------------------- */
+
+.form-container {
+	padding: var(--space);
+	background-color: var(--light);
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.add-user-form {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.add-user-form-top-row {
+	display: flex;
+	gap: var(--space-small);
+}
+
+.add-user-form-input-div {
+	width: 100%;
+	max-width: 33%;
+}
+
+.add-user-form-movies-container {
+	display: flex;
+	gap: var(--space-small);
+}
+
 /* -------------------------------------------------------------- 
 ------- below is -- IndividualUser.jsx
 -------------------------------------------------------------- */
@@ -285,7 +337,7 @@ h4 {
 }
 
 .user-name {
-	border-bottom: 4px solid var(--highlight);
+	border-bottom: var(--space-extra-small) solid var(--highlight);
 	width: min-content;
 	padding-bottom: var(--space-extra-small);
 	margin-bottom: var(--space);
@@ -320,4 +372,12 @@ h4 {
 .user-nav-prev:hover,
 .user-nav-next:hover {
 	text-decoration: underline;
+}
+
+/* -------------------------------------------------------------- 
+------- below is -- NotFound.jsx
+-------------------------------------------------------------- */
+
+.text-404 {
+	color: var(--light);
 }
