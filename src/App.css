@@ -124,12 +124,12 @@ table {
 }
 
 /* -------------------------------------------------------------- 
----------------- Globals
+------- below is -- Globals
 -------------------------------------------------------------- */
 
 * {
 	margin: none;
-	color: var(--light);
+	box-sizing: border-box;
 }
 
 :root {
@@ -137,8 +137,11 @@ table {
 	--dark: #222222;
 	--dark-lighter: #3b3b3b;
 	--light: #f1f2f6;
-	--space-extra-small: 1rem;
-	--space-small: 2rem;
+	--space-extra-small: 0.5rem;
+	--space-small: 1rem;
+	--space: 2rem;
+	--pill: 1000vmax;
+	--transition: 300ms;
 }
 
 body {
@@ -147,20 +150,70 @@ body {
 
 header {
 	background-color: var(--highlight);
-	padding: var(--space-small);
+	padding: var(--space);
 }
 
 main {
-	padding: var(--space-small);
+	padding: var(--space);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 100%;
+}
+
+button {
+	background-color: var(--highlight);
+	border: none;
+	border-radius: var(--pill);
+	padding: var(--space-extra-small) var(--space-small);
+	transition: var(--transition);
+	font-weight: bold;
+	color: var(--light);
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: var(--dark-lighter);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+li {
+	margin: var(--space-extra-small) 0;
+}
+
+h2 {
+	font-size: 34px;
+	width: max-content;
+}
+
+h3 {
+	font-size: 20px;
+}
+
+h4 {
+	font-size: 16px;
+}
+
+.container {
+	width: 100%;
+	max-width: 900px;
 }
 
 /* -------------------------------------------------------------- 
----------------- Header.jsx
+------- below is -- Header.jsx
 -------------------------------------------------------------- */
 
 .nav-ul {
 	display: flex;
-	gap: var(--space-small);
+	gap: var(--space);
 }
 
 .nav-link {
@@ -178,5 +231,93 @@ main {
 }
 
 .nav-link:active {
+	text-decoration: underline;
+}
+
+/* -------------------------------------------------------------- 
+------- below is -- AllUsers.jsx
+-------------------------------------------------------------- */
+
+.all-users-container {
+	padding: var(--space-small) 0;
+	width: 100%;
+}
+
+/* -------------------------------------------------------------- 
+------- below is -- UserPreview.jsx
+-------------------------------------------------------------- */
+
+.user-preview-card {
+	background-color: var(--light);
+	margin: var(--space-small) 0;
+	padding: var(--space-small);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.user-preview-info {
+	display: flex;
+	gap: var(--space);
+}
+
+.user-preview-job {
+	border-left: var(--space-extra-small) solid var(--highlight);
+	padding-left: var(--space-small);
+	display: flex;
+	align-items: center;
+	gap: var(--space-extra-small);
+}
+/* -------------------------------------------------------------- 
+------- below is -- IndividualUser.jsx
+-------------------------------------------------------------- */
+
+.user-info-box {
+	padding: var(--space);
+	background-color: var(--light);
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.user-info-box span {
+	font-weight: normal;
+}
+
+.user-name {
+	border-bottom: 4px solid var(--highlight);
+	width: min-content;
+	padding-bottom: var(--space-extra-small);
+	margin-bottom: var(--space);
+}
+
+.user-movie-li {
+	margin-left: var(--space);
+}
+
+.user-nav-bar {
+	margin: var(--space);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: var(--space-small);
+}
+
+.user-nav-buttons {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: var(--space-extra-small);
+}
+
+.user-nav-prev,
+.user-nav-next {
+	color: var(--light);
+	cursor: pointer;
+}
+
+.user-nav-prev:hover,
+.user-nav-next:hover {
 	text-decoration: underline;
 }

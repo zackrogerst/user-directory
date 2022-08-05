@@ -1,7 +1,17 @@
 import React from "react";
 
-const AllUsers = () => {
-	return <p>Home - All Users Page</p>;
+import UserPreview from "../components/UserPreview";
+
+const AllUsers = props => {
+	const { users } = props;
+
+	return (
+		<section className="all-users-container container">
+			{users.map((e, i) => (
+				<UserPreview user={e}/>
+			))}
+		</section>
+	);
 };
 
 export default AllUsers;
