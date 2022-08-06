@@ -15,7 +15,7 @@ import NotFound from "./screens/NotFound";
 import db from "./data/db";
 
 function App() {
-	const [usersList, setUsersList] = useState(db);
+	const [users, setUsers] = useState(db);
 	return (
 		// <Layout>
 		// 	<Routes>
@@ -29,9 +29,9 @@ function App() {
 		<Fragment>
 			<Header />
 			<main>
-				<AllUsers users={usersList} setUsers={setUsersList} />
-				<AddAUser users={usersList} setUsers={setUsersList} />
-				<IndividualUser users={usersList} setUsers={setUsersList} />
+				<AllUsers users={users} setUsers={setUsers} />
+				<AddAUser users={users} setUsers={setUsers} />
+				<IndividualUser users={users} setUsers={setUsers} />
 				<NotFound />
 			</main>
 		</Fragment>

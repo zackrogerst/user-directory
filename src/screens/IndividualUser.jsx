@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
 const IndividualUser = props => {
-	// const [user, setUser] = useState({});
 	const { users } = props;
 
 	const { id, name, location, title, employer, movies } = users[0];

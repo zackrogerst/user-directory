@@ -32,7 +32,6 @@ const AddAUser = props => {
 	}, [users, newName, newLocation, newJob, newEmployer, newFav, newFav2, newFav3]);
 
 	function sendUsers() {
-		console.log(newUser);
 		if (
 			newName !== "" &&
 			newLocation !== "" &&
@@ -43,7 +42,6 @@ const AddAUser = props => {
 			newFav3 !== ""
 		) {
 			setUsers([...users, newUser]);
-			console.table(users);
 		}
 	}
 
