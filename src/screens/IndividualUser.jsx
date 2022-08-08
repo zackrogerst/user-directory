@@ -1,8 +1,9 @@
 import React from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 
 const IndividualUser = props => {
 	const { users } = props;
+	let navigate = useNavigate();
 
 	const param = +useParams().num;
 	const index = users.findIndex(u => u.id === param);
@@ -49,7 +50,16 @@ const IndividualUser = props => {
 			</article>
 
 			<article className="user-nav-bar">
-				<h3 className="user-nav-prev">Previous</h3>
+				<h3
+					className="user-nav-next"
+					onClick={() => {
+						if (index !== 0) {
+							navigate(`/users-${index}`, { replace: true });
+						}
+					}}
+				>
+					Previous
+				</h3>
 
 				<div className="user-nav-buttons">
 					<button>Edit</button>
@@ -67,7 +77,16 @@ const IndividualUser = props => {
 					</Link>
 				</div>
 
-				<h3 className="user-nav-next">Next</h3>
+				<h3
+					className="user-nav-next"
+					onClick={() => {
+						if (index + 2 <= users.length) {
+							navigate(`/users-${index + 2}`, { replace: true });
+						}
+					}}
+				>
+					Next
+				</h3>
 			</article>
 		</section>
 	);
