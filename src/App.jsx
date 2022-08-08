@@ -23,7 +23,7 @@ function App() {
 			<Routes>
 				<Route path="/" element={<Navigate replace to="/users" />} />
 				<Route path="/users" element={<AllUsers users={users} setUsers={setUsers} />} />
-				<Route path="/users-:x" element={<IndividualUser users={users} setUsers={setUsers} />} />
+				<Route path="/users-:num" element={<IndividualUser users={users} setUsers={setUsers} />} />
 				<Route path="/add-user" element={<AddAUser users={users} setUsers={setUsers} />} />
 				<Route path="*" element={<NotFound />} />
 			</Routes>

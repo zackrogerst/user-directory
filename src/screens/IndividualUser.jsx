@@ -4,12 +4,10 @@ import { useParams, Link } from "react-router-dom";
 const IndividualUser = props => {
 	const { users } = props;
 
-	const x = +useParams().x;
+	const num = +useParams().num;
+	const index = users.findIndex(obj => obj.id === num);
 
-	const position = users.findIndex(u => u.id === x);
-	console.log("index in users array", position);
-
-	const { name, location, title, employer, movies } = users[position];
+	const { name, location, title, employer, movies } = users[index];
 
 	return (
 		<section className="user-card container">
@@ -44,7 +42,7 @@ const IndividualUser = props => {
 
 				<section className="user-id-box">
 					<p className="user-id">
-						ID: {x}/{users.length}
+						USER: {index}/{users.length}
 					</p>
 				</section>
 			</article>
