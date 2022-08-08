@@ -1,7 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const UserPreview = props => {
-	const { name, title, employer } = props.user;
+	const { id, name, title, employer } = props.user;
+
 
 	return (
 		<article className="user-preview-card">
@@ -13,8 +15,9 @@ const UserPreview = props => {
 					<p>{title}</p>
 				</div>
 			</section>
-
-			<button>View {name.split(" ")[0]}</button>
+			<Link to={`/users-${id}`}>
+				<button>View {name.split(" ")[0]}</button>
+			</Link>
 		</article>
 	);
 };

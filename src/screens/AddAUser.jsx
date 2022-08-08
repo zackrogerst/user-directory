@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 
+let serial = 5;
+
 const AddAUser = props => {
 	const { users, setUsers } = props;
 
@@ -12,7 +14,7 @@ const AddAUser = props => {
 	const [newFav3, setNewFav3] = useState("");
 
 	const [newUser, setNewUser] = useState({
-		id: users.length + 1,
+		id: serial,
 		name: newName,
 		location: newLocation,
 		job: newJob,
@@ -22,7 +24,7 @@ const AddAUser = props => {
 
 	useEffect(() => {
 		setNewUser({
-			id: users.length + 1,
+			id: serial,
 			name: newName,
 			location: newLocation,
 			title: newJob,
@@ -42,6 +44,7 @@ const AddAUser = props => {
 			newFav3 !== ""
 		) {
 			setUsers([...users, newUser]);
+			serial += 1
 		}
 	}
 

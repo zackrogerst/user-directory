@@ -172,6 +172,8 @@ button {
 	color: var(--light);
 	cursor: pointer;
 	max-width: max-content;
+	height: 100%;
+	max-height: max-content;
 }
 
 button:hover {
@@ -359,6 +361,7 @@ input {
 .user-nav-buttons {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	flex-wrap: wrap;
 	gap: var(--space-extra-small);
 }
