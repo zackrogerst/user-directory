@@ -4,8 +4,9 @@ import { useParams, Link } from "react-router-dom";
 const IndividualUser = props => {
 	const { users } = props;
 
-	const num = +useParams().num;
-	const index = users.findIndex(obj => obj.id === num);
+	const param = +useParams().num;
+	const index = users.findIndex(u => u.id === param);
+	// console.log("index in users array", index);
 
 	const { name, location, title, employer, movies } = users[index];
 
@@ -51,8 +52,16 @@ const IndividualUser = props => {
 				<h3 className="user-nav-prev">Previous</h3>
 
 				<div className="user-nav-buttons">
-						<button>Edit</button>
-						<button>Delete</button>
+					<button>Edit</button>
+					<Link to={`/`}>
+						<button
+							onClick={() => {
+								users.splice(index, 1);
+							}}
+						>
+							Delete
+						</button>
+					</Link>
 					<Link to={`/add-user`}>
 						<button>New</button>
 					</Link>
