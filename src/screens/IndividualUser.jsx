@@ -42,7 +42,7 @@ const IndividualUser = props => {
 
 				<section className="user-id-box">
 					<p className="user-id">
-						USER: {index}/{users.length}
+						USER: {index + 1}/{users.length}
 					</p>
 				</section>
 			</article>
