@@ -44,7 +44,7 @@ const AddAUser = props => {
 			newFav3 !== ""
 		) {
 			setUsers([...users, newUser]);
-			serial += 1
+			serial += 1;
 		}
 	}
 

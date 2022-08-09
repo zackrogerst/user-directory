@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 const UserPreview = props => {
 	const { id, name, title, employer } = props.user;
 
-
 	return (
 		<article className="user-preview-card">
 			<section className="user-preview-info">
