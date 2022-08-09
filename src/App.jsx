@@ -1,6 +1,4 @@
 import { useState } from "react";
-// import { Fragment } from "react";
-// import Header from "./components/Header";
 
 import { Routes, Route, Navigate } from "react-router-dom";
 
@@ -28,15 +26,6 @@ function App() {
 				<Route path="*" element={<NotFound />} />
 			</Routes>
 		</Layout>
-		// <Fragment>
-		// 	<Header />
-		// 	<main>
-		// 		<AllUsers users={users} setUsers={setUsers} />
-		// 		<AddAUser users={users} setUsers={setUsers} />
-		// 		<IndividualUser users={users} setUsers={setUsers} />
-		// 		<NotFound />
-		// 	</main>
-		// </Fragment>
 	);
 }
 
