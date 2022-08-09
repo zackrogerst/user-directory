@@ -15,7 +15,7 @@ const UserPreview = props => {
 					<p>{title}</p>
 				</div>
 			</section>
-			<Link to={`/users-${id}`}>
+			<Link to={`/users/${id}`}>
 				<button>View {name.split(" ")[0]}</button>
 			</Link>
 		</article>

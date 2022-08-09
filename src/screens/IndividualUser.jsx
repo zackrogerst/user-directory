@@ -6,9 +6,8 @@ const IndividualUser = props => {
 	let navigate = useNavigate();
 
 	const param = +useParams().num;
-	const index = users.findIndex(u => u.id === param);
-	// console.log("index in users array", index);
 
+	const index = users.findIndex(u => u.id === param);
 	const { name, location, title, employer, movies } = users[index];
 
 	return (
@@ -54,7 +53,7 @@ const IndividualUser = props => {
 					className="user-nav-next"
 					onClick={() => {
 						if (index !== 0) {
-							navigate(`/users-${index}`, { replace: true });
+							navigate(`/users/${users[index - 1].id}`, { replace: true });
 						}
 					}}
 				>
@@ -81,7 +80,7 @@ const IndividualUser = props => {
 					className="user-nav-next"
 					onClick={() => {
 						if (index + 2 <= users.length) {
-							navigate(`/users-${index + 2}`, { replace: true });
+							navigate(`/users/${users[index + 1].id}`, { replace: true });
 						}
 					}}
 				>
