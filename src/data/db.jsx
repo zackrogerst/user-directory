@@ -5,7 +5,7 @@ let db = [
 		location: "Manhatten, New York",
 		title: "Full-Stack Web Developer",
 		employer: "Apple",
-		movies: ["Tron", "Martian"]
+		movies: ["Tron", "Martian", "Star Wars"]
 	},
 	{
 		id: 2,
@@ -13,7 +13,7 @@ let db = [
 		location: "Buffalo, New York",
 		title: "Front End Web Developer",
 		employer: "Apple",
-		movies: ["Narnia", "SAO"]
+		movies: ["Narnia", "SAO", "Star Wars"]
 	},
 	{
 		id: 3,
@@ -21,7 +21,7 @@ let db = [
 		location: "Queens, New York",
 		title: "Back End Web Developer",
 		employer: "Apple",
-		movies: ["Blade Runner", "Gundam"]
+		movies: ["Blade Runner", "Gundam", "Star Wars"]
 	},
 	{
 		id: 4,
@@ -29,7 +29,7 @@ let db = [
 		location: "Brooklyn, New York",
 		title: "Data Analyst",
 		employer: "Apple",
-		movies: ["Harry Potter", "JonTronShow"]
+		movies: ["Harry Potter", "JonTronShow", "Star Wars"]
 	}
 ];
 

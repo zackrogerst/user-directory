@@ -378,6 +378,44 @@ input {
 }
 
 /* -------------------------------------------------------------- 
+------- below is -- EditUser.jsx
+-------------------------------------------------------------- */
+
+.edit-user-box {
+	padding: var(--space);
+	background-color: var(--light);
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.edit-user-box {
+	width: 100%;
+}
+
+.edit-user-info-box {
+	font-weight: normal;
+}
+
+.edit-user-name {
+	border-bottom: var(--space-extra-small) solid var(--highlight);
+	width: min-content;
+	padding-bottom: var(--space-extra-small);
+	margin-bottom: var(--space);
+}
+
+.edit-user-movies {
+	display: flex;
+	gap: 10px;
+	width: 100%;
+}
+
+.edit-user-movie-li {
+	margin-left: var(--space);
+}
+
+/* -------------------------------------------------------------- 
 ------- below is -- NotFound.jsx
 -------------------------------------------------------------- */
 

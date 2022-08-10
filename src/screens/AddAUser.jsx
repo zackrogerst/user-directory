@@ -102,21 +102,21 @@ const AddAUser = props => {
 				<section className="add-user-form-movies-container">
 					<input
 						id="movie"
-						placeholder=" Your First Favorite Movie"
+						placeholder="Your First Favorite Movie"
 						onChange={e => setNewFav(e.target.value)}
 						required
 					/>
 
 					<input
 						id="movie2"
-						placeholder=" Your Second Favorite Movie"
+						placeholder="Your Second Favorite Movie"
 						onChange={e => setNewFav2(e.target.value)}
 						required
 					/>
 
 					<input
 						id="movie3"
-						placeholder=" Your Third Favorite Movie"
+						placeholder="Your Third Favorite Movie"
 						onChange={e => setNewFav3(e.target.value)}
 						required
 					/>

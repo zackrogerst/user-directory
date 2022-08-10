@@ -6,7 +6,6 @@ const IndividualUser = props => {
 	let navigate = useNavigate();
 
 	const param = +useParams().num;
-
 	const index = users.findIndex(u => u.id === param);
 	const { name, location, title, employer, movies } = users[index];
 
@@ -61,7 +60,9 @@ const IndividualUser = props => {
 				</h3>
 
 				<div className="user-nav-buttons">
-					<button>Edit</button>
+					<Link to={`/edit-user/${users[index].id}`}>
+						<button>Edit</button>
+					</Link>
 					<Link to={`/`}>
 						<button
 							onClick={() => {
