@@ -7,9 +7,11 @@ const AllUsers = props => {
 
 	return (
 		<section className="all-users-container container">
-			{users.map((e, i) => (
-				<UserPreview user={e} key={i} />
-			))}
+			{users.length > 0 ? (
+				users.map((e, i) => <UserPreview user={e} key={i} />)
+			) : (
+				<h2 className="light-text">No Users!</h2>
+			)}
 		</section>
 	);
 };
