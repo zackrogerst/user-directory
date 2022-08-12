@@ -17,7 +17,7 @@ const AddAUser = props => {
 		id: serial,
 		name: newName,
 		location: newLocation,
-		job: newJob,
+		title: newJob,
 		employer: newEmployer,
 		movies: [newFav, newFav2, newFav3]
 	});

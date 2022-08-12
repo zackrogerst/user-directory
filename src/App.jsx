@@ -24,7 +24,7 @@ function App() {
 				<Route path="/users" element={<AllUsers users={users} setUsers={setUsers} />} />
 				<Route path="/users/:num" element={<IndividualUser users={users} setUsers={setUsers} />} />
 				<Route path="/add-user" element={<AddAUser users={users} setUsers={setUsers} />} />
-				<Route path="edit-user" element={<EditUser user={users[0]} />} />
+				<Route path="edit-user/:num" element={<EditUser users={users} setUsers={setUsers} />} />
 				<Route path="*" element={<NotFound />} />
 			</Routes>
 		</Layout>
