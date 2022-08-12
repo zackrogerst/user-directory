@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 let serial = 5;
 
 const AddAUser = props => {
 	const { users, setUsers } = props;
+	let navigate = useNavigate();
 
 	const [newName, setNewName] = useState("");
 	const [newLocation, setNewLocation] = useState("");
@@ -45,6 +47,7 @@ const AddAUser = props => {
 		) {
 			setUsers([...users, newUser]);
 			serial += 1;
+			navigate(`/users`, { replace: true });
 		}
 	}
 
