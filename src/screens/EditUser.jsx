@@ -47,7 +47,7 @@ const EditUser = props => {
 			editFav2 !== "" &&
 			editFav3 !== ""
 		) {
-			let tempUsers = users;
+			let tempUsers = users.map(e => e);
 			tempUsers[index] = editUser;
 			setUsers(tempUsers);
 			navigate(`/users/${users[index].id}`, { replace: true });
